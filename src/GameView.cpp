@@ -57,7 +57,7 @@ GameView::GameView(const int mode_, QWidget *parent): QGraphicsView(parent), gam
 
 	setWindowTitle("DeepHarvest");
 
-	turn_tooltip = new TextItem(human_turn,700,100);
+	turn_tooltip = new TextItem(human_turn,680,100);
 	turn_tooltip->setZValue(1);
 	scene->addItem(turn_tooltip);
 
@@ -81,7 +81,7 @@ GameView::GameView(const int mode_, QWidget *parent): QGraphicsView(parent), gam
     QObject::connect(timer, &QTimer::timeout, [this](){
 		this->seconds++;
 		seconds_tooltip->setHtml(utility::qstring_placeholder(seconds_tooltip_text, seconds_turn-seconds));
-		if(this->seconds >= seconds_turn) {this->timer->stop();this->PassToAI();}
+		if(this->seconds >= seconds_turn) {this->timer->stop(); if(game_eng.GetRound()==0) this->PassToAI();}
     });  
     
    timer->setInterval(1000);
@@ -123,7 +123,7 @@ void GameView::PassToAI() {
 	
 	RestoreGrid();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	turn_tooltip->placeIt(700, 100);
+	turn_tooltip->placeIt(680, 100);
 	
 	// let AI play
 	game_eng.Play();
