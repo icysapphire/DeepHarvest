@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 	QApplication a(argc, argv);
 	srand(time(0));
 	MainScreen main;
-	main.setFixedSize(800,550);
+	main.setFixedSize(800,540);
 	main.show();
 
 	return a.exec();
