@@ -84,9 +84,17 @@ void GameEngine::Update() {
 	while (iter.HasNext()){
 
 		Item& current = *(iter.GetNext());
-		if(current.type!=2 && current.pos.x == player->pos.x && current.pos.y == player->pos.y) {
-			if(current.type==0) {
+		if(current.type!=Item::BOY && current.pos.x == player->pos.x && current.pos.y == player->pos.y) {
+			if(current.type==Item::HOLE) {
 				hole_sound.play();
+				
+				// A bit of animation
+				player->hide();
+				qApp->processEvents();
+				std::this_thread::sleep_for(std::chrono::milliseconds(150));
+				player->show();player->setFocus();
+				qApp->processEvents();
+				
 				if(mode==1) delta = -1;
 				else delta = -0.3*player->GetScore();
 			} else {delta=current.reward; bonus_sound.play();}
