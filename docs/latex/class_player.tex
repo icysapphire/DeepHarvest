@@ -1,0 +1,124 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+The \hyperlink{class_player}{Player} class represents the generic player.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_player__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$game\+\_\+eng\+\_\+)\hypertarget{class_player_aecff22f81d0d3093d42be398456bbe62}{}\label{class_player_aecff22f81d0d3093d42be398456bbe62}
+
+\item 
+void {\bfseries Add\+Score} (const float delta)\hypertarget{class_player_a3e473c9e5749501cc42dbdae5b77d0f2}{}\label{class_player_a3e473c9e5749501cc42dbdae5b77d0f2}
+
+\item 
+float {\bfseries Get\+Score} () const \hypertarget{class_player_ac8d63e7ecc7b640d6710462bbc5715d4}{}\label{class_player_ac8d63e7ecc7b640d6710462bbc5715d4}
+
+\item 
+\hyperlink{structposition}{position} \hyperlink{class_player_a15005501b35a90791448552245581060}{Get\+Start\+Pos} () const 
+\item 
+bool \hyperlink{class_player_a68f6b86fc2420f0ee45024e44929ba15}{Can\+Move} () const 
+\item 
+int {\bfseries Get\+Moves} () const \hypertarget{class_player_a4a9f3ee2deff72685459f606fe640c1d}{}\label{class_player_a4a9f3ee2deff72685459f606fe640c1d}
+
+\item 
+bool \hyperlink{class_player_af92895e18f19034043f8274a069afde6}{Move\+In\+Direction} (const int dir)
+\begin{DoxyCompactList}\small\item\em moves the player \end{DoxyCompactList}\item 
+virtual void {\bfseries Play} ()=0\hypertarget{class_player_aeef5c9637e474dd73ea27e9ffc583dcd}{}\label{class_player_aeef5c9637e474dd73ea27e9ffc583dcd}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structposition}{position} {\bfseries start\+\_\+pos}\hypertarget{class_player_ac150491aec2a800cc12d588f98744b88}{}\label{class_player_ac150491aec2a800cc12d588f98744b88}
+
+\item 
+float {\bfseries score}\hypertarget{class_player_aef5032df427b2e15b74477dabc045385}{}\label{class_player_aef5032df427b2e15b74477dabc045385}
+
+\item 
+int {\bfseries moves}\hypertarget{class_player_a48886d1a3e0e9093c9ca28dbfec08c38}{}\label{class_player_a48886d1a3e0e9093c9ca28dbfec08c38}
+
+\item 
+\hyperlink{class_game_engine}{Game\+Engine} $\ast$ {\bfseries game\+\_\+eng}\hypertarget{class_player_a772e6dd910b610292f7d014a4dfef94a}{}\label{class_player_a772e6dd910b610292f7d014a4dfef94a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_player}{Player} class represents the generic player. 
+
+It is responsible for moving the character on the grid, receiving score updates, updating tooltips. 
+
+\subsection{Member Function Documentation}
+\index{Player@{Player}!Can\+Move@{Can\+Move}}
+\index{Can\+Move@{Can\+Move}!Player@{Player}}
+\subsubsection[{\texorpdfstring{Can\+Move() const }{CanMove() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::\+Can\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_player_a68f6b86fc2420f0ee45024e44929ba15}{}\label{class_player_a68f6b86fc2420f0ee45024e44929ba15}
+\begin{DoxyReturn}{Returns}
+true if the player still has moves to do 
+\end{DoxyReturn}
+\index{Player@{Player}!Get\+Start\+Pos@{Get\+Start\+Pos}}
+\index{Get\+Start\+Pos@{Get\+Start\+Pos}!Player@{Player}}
+\subsubsection[{\texorpdfstring{Get\+Start\+Pos() const }{GetStartPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf position} Player\+::\+Get\+Start\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_player_a15005501b35a90791448552245581060}{}\label{class_player_a15005501b35a90791448552245581060}
+\begin{DoxyReturn}{Returns}
+initial player position 
+\end{DoxyReturn}
+\index{Player@{Player}!Move\+In\+Direction@{Move\+In\+Direction}}
+\index{Move\+In\+Direction@{Move\+In\+Direction}!Player@{Player}}
+\subsubsection[{\texorpdfstring{Move\+In\+Direction(const int dir)}{MoveInDirection(const int dir)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::\+Move\+In\+Direction (
+\begin{DoxyParamCaption}
+\item[{const int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{class_player_af92895e18f19034043f8274a069afde6}{}\label{class_player_af92895e18f19034043f8274a069afde6}
+
+
+moves the player 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & is an integer between 0 and 3 (0 -\/ up, 1 -\/ down, 2 -\/ left, 3 -\/ right) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move succedeed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/netsurf/buildspeed/c/src/Player.\+h\item 
+/home/netsurf/buildspeed/c/src/Player.\+cpp\end{DoxyCompactItemize}

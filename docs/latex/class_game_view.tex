@@ -1,0 +1,181 @@
+\hypertarget{class_game_view}{}\section{Game\+View Class Reference}
+\label{class_game_view}\index{Game\+View@{Game\+View}}
+
+
+Inheritance diagram for Game\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_game_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_view__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+View} (const int mode\+\_\+, Q\+Widget $\ast$parent=0)\hypertarget{class_game_view_a10ff55ad9e283fc42d4a1eecfe6ee2d8}{}\label{class_game_view_a10ff55ad9e283fc42d4a1eecfe6ee2d8}
+
+\item 
+void \hyperlink{class_game_view_ab44f4473d1292b3e67bff57cf04138d7}{Set\+Path} (const std\+::string path\+\_\+)
+\begin{DoxyCompactList}\small\item\em stores working directory \end{DoxyCompactList}\item 
+std\+::string {\bfseries Get\+Path} ()\hypertarget{class_game_view_a26dcec76a5c6778b4f61c972e1675089}{}\label{class_game_view_a26dcec76a5c6778b4f61c972e1675089}
+
+\item 
+void \hyperlink{class_game_view_a61fff3c00a8b13002e3b0efffb1e9ad0}{Pass\+To\+AI} ()\hypertarget{class_game_view_a61fff3c00a8b13002e3b0efffb1e9ad0}{}\label{class_game_view_a61fff3c00a8b13002e3b0efffb1e9ad0}
+
+\begin{DoxyCompactList}\small\item\em resets the game environment in order to let AI agent play \end{DoxyCompactList}\item 
+void {\bfseries key\+Press\+Event} (Q\+Key\+Event $\ast$event)\hypertarget{class_game_view_ab8244fb1cf987e1eb91d62968b3d2cfd}{}\label{class_game_view_ab8244fb1cf987e1eb91d62968b3d2cfd}
+
+\item 
+void \hyperlink{class_game_view_a7d840226c0e3d25380081cede750ce5b}{Flash\+Score\+Change} (const float delta)
+\begin{DoxyCompactList}\small\item\em displays score change as consequence of a move \end{DoxyCompactList}\item 
+void \hyperlink{class_game_view_adf946f732dca534a0af220d728fd1a22}{Set\+Player\+Tooltip\+Text} (const Q\+String str)
+\begin{DoxyCompactList}\small\item\em displays score change as consequence of a move \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries rect\+\_\+margin} = 20\hypertarget{class_game_view_a7044d555439ae4b05b2d06c2ee63d294}{}\label{class_game_view_a7044d555439ae4b05b2d06c2ee63d294}
+
+\item 
+static const int {\bfseries seconds\+\_\+turn} = 15\hypertarget{class_game_view_a5fc396e1ec2179e006f4e6dd0f9915cb}{}\label{class_game_view_a5fc396e1ec2179e006f4e6dd0f9915cb}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Restore\+Grid} ()\hypertarget{class_game_view_a6e52f2706160a781da99bdeb5a2a6082}{}\label{class_game_view_a6e52f2706160a781da99bdeb5a2a6082}
+
+\item 
+void {\bfseries Reset\+Timer} ()\hypertarget{class_game_view_af23e016497d307afd3b8eebd41086de0}{}\label{class_game_view_af23e016497d307afd3b8eebd41086de0}
+
+\item 
+void {\bfseries Play\+Again} ()\hypertarget{class_game_view_a53c1f97294b6be0e41cc627fc21abd5d}{}\label{class_game_view_a53c1f97294b6be0e41cc627fc21abd5d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries turn\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_ad2bffcf684b7e40e9253b803f7e551e3}{}\label{class_game_view_ad2bffcf684b7e40e9253b803f7e551e3}
+
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries human\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_a94384f3324a363d01a6a032fcc5343d3}{}\label{class_game_view_a94384f3324a363d01a6a032fcc5343d3}
+
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries ai\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_a91eca658fe5c578738ac3df698b2c764}{}\label{class_game_view_a91eca658fe5c578738ac3df698b2c764}
+
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries conclusion\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_a2594d4271aa9afcde50aab83ef78f385}{}\label{class_game_view_a2594d4271aa9afcde50aab83ef78f385}
+
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries change\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_a9f2dcc56b12ec541b5a7882ec1abb2e7}{}\label{class_game_view_a9f2dcc56b12ec541b5a7882ec1abb2e7}
+
+\item 
+\hyperlink{class_text_item}{Text\+Item} $\ast$ {\bfseries seconds\+\_\+tooltip} = N\+U\+LL\hypertarget{class_game_view_a28bfa10f16a992c83d36994c334e208c}{}\label{class_game_view_a28bfa10f16a992c83d36994c334e208c}
+
+\item 
+string {\bfseries path}\hypertarget{class_game_view_a396325f196775191890d3262ecb5e9ff}{}\label{class_game_view_a396325f196775191890d3262ecb5e9ff}
+
+\item 
+Q\+Graphics\+Scene $\ast$ {\bfseries scene} = N\+U\+LL\hypertarget{class_game_view_aa96ff0163839f95478ed0de98d3e4e51}{}\label{class_game_view_aa96ff0163839f95478ed0de98d3e4e51}
+
+\item 
+\hyperlink{class_game_engine}{Game\+Engine} {\bfseries game\+\_\+eng}\hypertarget{class_game_view_a1f53dd762f200a230c3b90510c14a30a}{}\label{class_game_view_a1f53dd762f200a230c3b90510c14a30a}
+
+\item 
+Q\+Timer $\ast$ {\bfseries timer}\hypertarget{class_game_view_ab651668a749d0a823b67b5b260be2125}{}\label{class_game_view_ab651668a749d0a823b67b5b260be2125}
+
+\item 
+int {\bfseries seconds}\hypertarget{class_game_view_a005c0fe1f5c3b898ae4ec7ee4496ebab}{}\label{class_game_view_a005c0fe1f5c3b898ae4ec7ee4496ebab}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const Q\+String {\bfseries human\+\_\+turn} = \char`\"{}$<$h1$>$It\textquotesingle{}s human turn.$<$/h1$>$\char`\"{}\hypertarget{class_game_view_a8d393d08a1b5e348fc36d848fb9e590b}{}\label{class_game_view_a8d393d08a1b5e348fc36d848fb9e590b}
+
+\item 
+static const Q\+String {\bfseries ai\+\_\+turn} = \char`\"{}$<$h1$>$Now it\textquotesingle{}s AI turn...$<$/h1$>$\char`\"{}\hypertarget{class_game_view_a4a605ac7010042321724e49c4a43a485}{}\label{class_game_view_a4a605ac7010042321724e49c4a43a485}
+
+\item 
+static const Q\+String {\bfseries initial\+\_\+human\+\_\+score\+\_\+tooltip} = \char`\"{}Human score\+: $<$b style=\textquotesingle{}color\+:\#06\+C; font-\/size\+:20px;\textquotesingle{}$>$0$<$/b$>$, Moves\+:$<$b$>$0/50$<$/b$>$\char`\"{}\hypertarget{class_game_view_a0575767749bddb4f4552bc73caa1f2bd}{}\label{class_game_view_a0575767749bddb4f4552bc73caa1f2bd}
+
+\item 
+static const Q\+String {\bfseries initial\+\_\+ai\+\_\+score\+\_\+tooltip} = \char`\"{}AI score\+: $<$b style=\textquotesingle{}color\+:\#06\+C; font-\/size\+:20px;\textquotesingle{}$>$0$<$/b$>$, Moves\+:$<$b$>$0/50$<$/b$>$\char`\"{}\hypertarget{class_game_view_a9503edee1bdd2d5acf8c42d368392b94}{}\label{class_game_view_a9503edee1bdd2d5acf8c42d368392b94}
+
+\item 
+static const string {\bfseries seconds\+\_\+tooltip\+\_\+text} =\char`\"{}$<$h1 style=\textquotesingle{}color\+:red\textquotesingle{}$>$\%1\% seconds$<$/h1$>$\char`\"{}\hypertarget{class_game_view_a0875a9ee7af2bf612ee3d0e01bdc4683}{}\label{class_game_view_a0875a9ee7af2bf612ee3d0e01bdc4683}
+
+\item 
+static const string {\bfseries score\+\_\+change\+\_\+positive\+\_\+text} =\char`\"{}$<$h1 style=\textquotesingle{}color\+:green;\textquotesingle{}$>$+\%1\%$<$/h1$>$\char`\"{}\hypertarget{class_game_view_a119becaa2deb77dacd5b1e3385c49b2d}{}\label{class_game_view_a119becaa2deb77dacd5b1e3385c49b2d}
+
+\item 
+static const string {\bfseries score\+\_\+change\+\_\+negative\+\_\+text} =\char`\"{}$<$h1 style=\textquotesingle{}color\+:red;\textquotesingle{}$>$\%1\%$<$/h1$>$\char`\"{}\hypertarget{class_game_view_a199fa1bbcc63fb0890bbddf6cfa6ba54}{}\label{class_game_view_a199fa1bbcc63fb0890bbddf6cfa6ba54}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Game\+View@{Game\+View}!Flash\+Score\+Change@{Flash\+Score\+Change}}
+\index{Flash\+Score\+Change@{Flash\+Score\+Change}!Game\+View@{Game\+View}}
+\subsubsection[{\texorpdfstring{Flash\+Score\+Change(const float delta)}{FlashScoreChange(const float delta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+View\+::\+Flash\+Score\+Change (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_view_a7d840226c0e3d25380081cede750ce5b}{}\label{class_game_view_a7d840226c0e3d25380081cede750ce5b}
+
+
+displays score change as consequence of a move 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & is the score variation \\
+\hline
+\end{DoxyParams}
+\index{Game\+View@{Game\+View}!Set\+Path@{Set\+Path}}
+\index{Set\+Path@{Set\+Path}!Game\+View@{Game\+View}}
+\subsubsection[{\texorpdfstring{Set\+Path(const std\+::string path\+\_\+)}{SetPath(const std::string path_)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+View\+::\+Set\+Path (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{path\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_game_view_ab44f4473d1292b3e67bff57cf04138d7}{}\label{class_game_view_ab44f4473d1292b3e67bff57cf04138d7}
+
+
+stores working directory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the working directory path \\
+\hline
+\end{DoxyParams}
+\index{Game\+View@{Game\+View}!Set\+Player\+Tooltip\+Text@{Set\+Player\+Tooltip\+Text}}
+\index{Set\+Player\+Tooltip\+Text@{Set\+Player\+Tooltip\+Text}!Game\+View@{Game\+View}}
+\subsubsection[{\texorpdfstring{Set\+Player\+Tooltip\+Text(const Q\+String str)}{SetPlayerTooltipText(const QString str)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+View\+::\+Set\+Player\+Tooltip\+Text (
+\begin{DoxyParamCaption}
+\item[{const Q\+String}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_view_adf946f732dca534a0af220d728fd1a22}{}\label{class_game_view_adf946f732dca534a0af220d728fd1a22}
+
+
+displays score change as consequence of a move 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & is the score variation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/netsurf/buildspeed/c/src/Game\+View.\+h\item 
+/home/netsurf/buildspeed/c/src/Game\+View.\+cpp\end{DoxyCompactItemize}

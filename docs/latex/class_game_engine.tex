@@ -1,0 +1,106 @@
+\hypertarget{class_game_engine}{}\section{Game\+Engine Class Reference}
+\label{class_game_engine}\index{Game\+Engine@{Game\+Engine}}
+
+
+Collaboration diagram for Game\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Engine} (const int mode\+\_\+, const int sizex, const int sizey)\hypertarget{class_game_engine_afce908a69590e1fbbf5e6c142d8817db}{}\label{class_game_engine_afce908a69590e1fbbf5e6c142d8817db}
+
+\item 
+void \hyperlink{class_game_engine_ab7daf2551eca113947559e9f07dae0a7}{Init} ()\hypertarget{class_game_engine_ab7daf2551eca113947559e9f07dae0a7}{}\label{class_game_engine_ab7daf2551eca113947559e9f07dae0a7}
+
+\begin{DoxyCompactList}\small\item\em inits items container with suitable items at random positions \end{DoxyCompactList}\item 
+int {\bfseries Get\+Mode} () const \hypertarget{class_game_engine_a7654f7e7c36f08ca30d7ab787b6c8395}{}\label{class_game_engine_a7654f7e7c36f08ca30d7ab787b6c8395}
+
+\item 
+int {\bfseries Get\+Round} () const \hypertarget{class_game_engine_a70dbb4a628af69ee9a98bcd0f55cf82b}{}\label{class_game_engine_a70dbb4a628af69ee9a98bcd0f55cf82b}
+
+\item 
+int {\bfseries Get\+Score} () const \hypertarget{class_game_engine_aaadf240e3c57133232fbc76a6c7dbef4}{}\label{class_game_engine_aaadf240e3c57133232fbc76a6c7dbef4}
+
+\item 
+int {\bfseries Get\+Width} () const \hypertarget{class_game_engine_a8ebfb1997f8ba5e7883eaa5f6dcf07b0}{}\label{class_game_engine_a8ebfb1997f8ba5e7883eaa5f6dcf07b0}
+
+\item 
+int {\bfseries Get\+Height} () const \hypertarget{class_game_engine_a6d8b90505d78fed818a60359ece85365}{}\label{class_game_engine_a6d8b90505d78fed818a60359ece85365}
+
+\item 
+void \hyperlink{class_game_engine_aafb70dae41903a73df76f638541665f8}{Play} ()\hypertarget{class_game_engine_aafb70dae41903a73df76f638541665f8}{}\label{class_game_engine_aafb70dae41903a73df76f638541665f8}
+
+\begin{DoxyCompactList}\small\item\em calls \hyperlink{class_game_engine_aafb70dae41903a73df76f638541665f8}{Play()} method on current \hyperlink{class_player}{Player} \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_a7ebc4fbf00f14a405d989ef7c8d8c1c6}{Populate\+Grid} (Q\+Graphics\+Scene $\ast$scene, bool restore=false)
+\begin{DoxyCompactList}\small\item\em populates game grid with items from items container \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_ae831b6dee7c10ddc3cf5bc5d217031b1}{Update} ()\hypertarget{class_game_engine_ae831b6dee7c10ddc3cf5bc5d217031b1}{}\label{class_game_engine_ae831b6dee7c10ddc3cf5bc5d217031b1}
+
+\begin{DoxyCompactList}\small\item\em updates game environment after player\textquotesingle{}s move \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_ac3a1cfe6f6278619a1158dad566cd87c}{To\+Matrix} (vector$<$ cv\+::\+Mat $>$ \&matrix)\hypertarget{class_game_engine_ac3a1cfe6f6278619a1158dad566cd87c}{}\label{class_game_engine_ac3a1cfe6f6278619a1158dad566cd87c}
+
+\begin{DoxyCompactList}\small\item\em exports current game state as a Open\+CV matrix \end{DoxyCompactList}\item 
+\hyperlink{structposition}{position} \hyperlink{class_game_engine_abd94740b8a8ac3bf474cf695023473ed}{Pick\+New\+Position} ()\hypertarget{class_game_engine_abd94740b8a8ac3bf474cf695023473ed}{}\label{class_game_engine_abd94740b8a8ac3bf474cf695023473ed}
+
+\begin{DoxyCompactList}\small\item\em returns an empty position on the grid \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_ab6a4193dd629e968bdc3ea8eae259b13}{Set\+Player\+Tooltip\+Text} (const Q\+String str)\hypertarget{class_game_engine_ab6a4193dd629e968bdc3ea8eae259b13}{}\label{class_game_engine_ab6a4193dd629e968bdc3ea8eae259b13}
+
+\begin{DoxyCompactList}\small\item\em updates current player\textquotesingle{}s score tooltip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries round}\hypertarget{class_game_engine_aa28d21ca6308c68892642f112a9f576a}{}\label{class_game_engine_aa28d21ca6308c68892642f112a9f576a}
+
+\item 
+int {\bfseries mode}\hypertarget{class_game_engine_a7145ec824cc63e5323fd8f5a074ec342}{}\label{class_game_engine_a7145ec824cc63e5323fd8f5a074ec342}
+
+\item 
+int {\bfseries sizeX}\hypertarget{class_game_engine_a5b500d38dc898994a2e0f53a923fe0a5}{}\label{class_game_engine_a5b500d38dc898994a2e0f53a923fe0a5}
+
+\item 
+int {\bfseries sizeY}\hypertarget{class_game_engine_ad720d519a87110aea56f8c896de586e9}{}\label{class_game_engine_ad720d519a87110aea56f8c896de586e9}
+
+\item 
+\hyperlink{class_items_container}{Items\+Container} {\bfseries items\+\_\+container}\hypertarget{class_game_engine_a306792ba7de2bd02ac487425a449992c}{}\label{class_game_engine_a306792ba7de2bd02ac487425a449992c}
+
+\item 
+\hyperlink{class_player}{Player} $\ast$ {\bfseries player} = N\+U\+LL\hypertarget{class_game_engine_aabcb1d42f2f2a0d49abb6f010599eb78}{}\label{class_game_engine_aabcb1d42f2f2a0d49abb6f010599eb78}
+
+\item 
+Q\+Sound\+Effect {\bfseries bonus\+\_\+sound}\hypertarget{class_game_engine_a5e986b659dd5a4c57039332c7e468e99}{}\label{class_game_engine_a5e986b659dd5a4c57039332c7e468e99}
+
+\item 
+Q\+Sound\+Effect {\bfseries hole\+\_\+sound}\hypertarget{class_game_engine_a218635f0033570563613c93a94decdf6}{}\label{class_game_engine_a218635f0033570563613c93a94decdf6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Game\+Engine@{Game\+Engine}!Populate\+Grid@{Populate\+Grid}}
+\index{Populate\+Grid@{Populate\+Grid}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{\texorpdfstring{Populate\+Grid(\+Q\+Graphics\+Scene $\ast$scene, bool restore=false)}{PopulateGrid(QGraphicsScene *scene, bool restore=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Engine\+::\+Populate\+Grid (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{bool}]{restore = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_engine_a7ebc4fbf00f14a405d989ef7c8d8c1c6}{}\label{class_game_engine_a7ebc4fbf00f14a405d989ef7c8d8c1c6}
+
+
+populates game grid with items from items container 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & is the game grid, restore is true if grid items backup has to be restored \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/netsurf/buildspeed/c/src/Game\+Engine.\+h\item 
+/home/netsurf/buildspeed/c/src/Game\+Engine.\+cpp\end{DoxyCompactItemize}

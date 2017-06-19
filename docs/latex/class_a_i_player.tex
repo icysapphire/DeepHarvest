@@ -1,0 +1,84 @@
+\hypertarget{class_a_i_player}{}\section{A\+I\+Player Class Reference}
+\label{class_a_i_player}\index{A\+I\+Player@{A\+I\+Player}}
+
+
+Inheritance diagram for A\+I\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_a_i_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+I\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_player__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries A\+I\+Player} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$game\+\_\+eng\+\_\+, const std\+::string \&path)\hypertarget{class_a_i_player_aa75e6656a876ae0d4dc1502754d883ac}{}\label{class_a_i_player_aa75e6656a876ae0d4dc1502754d883ac}
+
+\item 
+Tensor \hyperlink{class_a_i_player_ad7462ee157edc5701c3f4534159ab54b}{Predict\+Move} ()
+\begin{DoxyCompactList}\small\item\em gets the two most optimal game moves from Q-\/network \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_a_i_player_a0a82287b3e1353b58c5dc79d099ab4a6}{Play} ()\hypertarget{class_a_i_player_a0a82287b3e1353b58c5dc79d099ab4a6}{}\label{class_a_i_player_a0a82287b3e1353b58c5dc79d099ab4a6}
+
+\begin{DoxyCompactList}\small\item\em actually plays the game according to Q-\/network predictions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Status {\bfseries Load\+Graph} (const string \&graph\+\_\+file\+\_\+name, std\+::unique\+\_\+ptr$<$ tensorflow\+::\+Session $>$ $\ast$session)\hypertarget{class_a_i_player_aac8bd4a862ce36c2baa28ecb363732b4}{}\label{class_a_i_player_aac8bd4a862ce36c2baa28ecb363732b4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mat {\bfseries state}\hypertarget{class_a_i_player_ab94d1475df2d2902134ccf5b2e9f6741}{}\label{class_a_i_player_ab94d1475df2d2902134ccf5b2e9f6741}
+
+\item 
+Tensor {\bfseries s\+\_\+tensor}\hypertarget{class_a_i_player_a273bef59d854a3b944887aef66e916bb}{}\label{class_a_i_player_a273bef59d854a3b944887aef66e916bb}
+
+\item 
+std\+::unique\+\_\+ptr$<$ tensorflow\+::\+Session $>$ {\bfseries session}\hypertarget{class_a_i_player_af067956516b244d0f8c3ee01bbbe50b4}{}\label{class_a_i_player_af067956516b244d0f8c3ee01bbbe50b4}
+
+\item 
+Tensor {\bfseries rnn\+State}\hypertarget{class_a_i_player_a8480f9a924865fad83075ad453d7ba29}{}\label{class_a_i_player_a8480f9a924865fad83075ad453d7ba29}
+
+\item 
+vector$<$ int $>$ {\bfseries recents}\hypertarget{class_a_i_player_addbd2f9dbe9c9956a7b26cbf06f0e53d}{}\label{class_a_i_player_addbd2f9dbe9c9956a7b26cbf06f0e53d}
+
+\item 
+vector$<$ bool $>$ {\bfseries moved}\hypertarget{class_a_i_player_a2c2c2cdfbd3ecbcaf564d0c6e1c1f015}{}\label{class_a_i_player_a2c2c2cdfbd3ecbcaf564d0c6e1c1f015}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{A\+I\+Player@{A\+I\+Player}!Predict\+Move@{Predict\+Move}}
+\index{Predict\+Move@{Predict\+Move}!A\+I\+Player@{A\+I\+Player}}
+\subsubsection[{\texorpdfstring{Predict\+Move()}{PredictMove()}}]{\setlength{\rightskip}{0pt plus 5cm}Tensor A\+I\+Player\+::\+Predict\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_a_i_player_ad7462ee157edc5701c3f4534159ab54b}{}\label{class_a_i_player_ad7462ee157edc5701c3f4534159ab54b}
+
+
+gets the two most optimal game moves from Q-\/network 
+
+\begin{DoxyReturn}{Returns}
+tensorflow\+::\+Tensor of size 2x1 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/netsurf/buildspeed/c/src/A\+I\+Player.\+h\item 
+/home/netsurf/buildspeed/c/src/A\+I\+Player.\+cpp\end{DoxyCompactItemize}

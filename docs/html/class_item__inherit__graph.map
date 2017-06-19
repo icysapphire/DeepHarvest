@@ -1,0 +1,7 @@
+<map id="Item" name="Item">
+<area shape="rect" id="node3" href="$class_bonus.html" title="Bonus" alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node4" href="$class_hole.html" title="Hole" alt="" coords="89,155,138,181"/>
+<area shape="rect" id="node5" href="$class_player.html" title="The Player class represents the generic player. " alt="" coords="163,155,221,181"/>
+<area shape="rect" id="node6" href="$class_a_i_player.html" title="AIPlayer" alt="" coords="101,229,173,256"/>
+<area shape="rect" id="node7" href="$class_human_player.html" title="HumanPlayer" alt="" coords="197,229,299,256"/>
+</map>

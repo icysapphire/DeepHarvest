@@ -1,0 +1,8 @@
+<map id="GameView" name="GameView">
+<area shape="rect" id="node3" href="$class_game_engine.html" title="GameEngine" alt="" coords="294,95,391,121"/>
+<area shape="rect" id="node5" href="$class_player.html" title="The Player class represents the generic player. " alt="" coords="427,257,485,284"/>
+<area shape="rect" id="node4" href="$class_items_container.html" title="ItemsContainer" alt="" coords="287,5,398,32"/>
+<area shape="rect" id="node6" href="$class_item.html" title="The Item class represents any pickable item the player can run into. " alt="" coords="581,95,629,121"/>
+<area shape="rect" id="node8" href="$structposition.html" title="Represents a pair of coordinates on the grid. " alt="" coords="465,5,532,32"/>
+<area shape="rect" id="node9" href="$class_text_item.html" title="TextItem" alt="" coords="36,95,111,121"/>
+</map>

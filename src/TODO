@@ -1,0 +1,124 @@
+gestire deallocazione puntatori player
+
+inlining
+constness
+constness di tutti i parametri in ingresso che non devono essere modificati (es. setter)
+tensorflow dep solo dove necessario
+direttive using nei cpp
+
+distruttore per sessione tf
+
+
+#include "tensorflow/cc/framework/ops.h"
+#include "tensorflow/cc/ops/const_op.h"
+#include "tensorflow/cc/ops/image_ops.h"
+#include "tensorflow/cc/ops/standard_ops.h"
+#include "tensorflow/core/framework/graph.pb.h" 
+#include "tensorflow/core/framework/types.h"
+#include "tensorflow/core/framework/tensor.h"
+#include "tensorflow/core/graph/default_device.h"
+#include "tensorflow/core/graph/graph_def_builder.h"
+#include "tensorflow/core/lib/core/errors.h"
+#include "tensorflow/core/lib/core/stringpiece.h"
+#include "tensorflow/core/lib/core/threadpool.h"
+#include "tensorflow/core/lib/io/path.h"
+#include "tensorflow/core/lib/strings/stringprintf.h"
+#include "tensorflow/core/platform/init_main.h"
+#include "tensorflow/core/platform/logging.h"
+#include "tensorflow/core/platform/types.h"
+#include "tensorflow/core/public/session.h"
+#include "tensorflow/core/util/command_line_flags.h"
+
+
+
+
+cc_library(
+    name = "GameEngine",
+    srcs = ["GameEngine.cpp"],
+    hdrs = ["GameEngine.h"],
+    deps = [
+    	":Res",
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Player",
+        ":GameView",
+        "//tensorflow/cc:cc_ops",
+        "//tensorflow/cc:client_session",
+        "//tensorflow/core:tensorflow"
+    
+    ],
+    copts = ["-fpic"]
+)
+
+cc_library(
+    name = "Player",
+    srcs = ["Player.cpp"],
+    hdrs = ["Player.h"],
+    deps = [
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Item",
+        ":TextItem"
+    ],
+    copts = ["-fpic"]
+)
+
+cc_library(
+    name = "HumanPlayer",
+    srcs = ["HumanPlayer.cpp"],
+    hdrs = ["HumanPlayer.h"],
+    deps = [
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Player",
+        ":GameEngine"
+    ],
+    copts = ["-fpic"]
+)
+
+cc_library(
+    name = "AIPlayer",
+    srcs = ["AIPlayer.cpp"],
+    hdrs = ["AIPlayer.h"],
+    deps = [
+        "//tensorflow/cc:cc_ops",
+        "//tensorflow/cc:client_session",
+        "//tensorflow/core:tensorflow",
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Player",
+        ":GameEngine"
+    ],
+    copts = ["-fpic"]
+)
+
+
+cc_library(
+    name = "Bonus",
+    srcs = ["Bonus.cpp"],
+    hdrs = ["Bonus.h"],
+    deps = [
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Item"
+    ],
+    copts = ["-fpic"]
+)
+
+cc_library(
+    name = "Hole",
+    srcs = ["Hole.cpp"],
+    hdrs = ["Hole.h"],
+    deps = [
+        "@qt//:qt_core",
+        "@qt//:qt_widgets",
+        "@qt//:qt_gui",
+        ":Item"
+    ],
+    copts = ["-fpic"]
+)

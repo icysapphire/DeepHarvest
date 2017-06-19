@@ -1,0 +1,6 @@
+<map id="Player" name="Player">
+<area shape="rect" id="node5" href="$class_game_engine.html" title="GameEngine" alt="" coords="140,260,237,287"/>
+<area shape="rect" id="node2" href="$class_item.html" title="The Item class represents any pickable item the player can run into. " alt="" coords="163,95,211,121"/>
+<area shape="rect" id="node4" href="$structposition.html" title="Represents a pair of coordinates on the grid. " alt="" coords="226,5,293,32"/>
+<area shape="rect" id="node6" href="$class_items_container.html" title="ItemsContainer" alt="" coords="5,171,116,197"/>
+</map>

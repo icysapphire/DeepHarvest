@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$class_item.html" title="The Item class represents any pickable item the player can run into. " alt="" coords="208,56,256,83"/>
+<area shape="rect" id="node3" href="$class_bonus.html" title="Bonus" alt="" coords="304,5,363,32"/>
+<area shape="rect" id="node4" href="$class_hole.html" title="Hole" alt="" coords="309,56,358,83"/>
+<area shape="rect" id="node5" href="$class_player.html" title="The Player class represents the generic player. " alt="" coords="304,107,363,133"/>
+<area shape="rect" id="node6" href="$class_a_i_player.html" title="AIPlayer" alt="" coords="425,81,497,108"/>
+<area shape="rect" id="node7" href="$class_human_player.html" title="HumanPlayer" alt="" coords="411,132,512,159"/>
+</map>
