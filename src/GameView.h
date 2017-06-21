@@ -64,16 +64,16 @@ protected:
 	static const string score_change_negative_text;
 	
 	
-	TextItem* turn_tooltip = NULL;
-	TextItem* human_tooltip = NULL;
-	TextItem* ai_tooltip = NULL;
-	TextItem* conclusion_tooltip = NULL;
-	TextItem* change_tooltip = NULL;
-	TextItem* seconds_tooltip = NULL;
+	TextItem* turn_tooltip = nullptr;
+	TextItem* human_tooltip = nullptr;
+	TextItem* ai_tooltip = nullptr;
+	TextItem* conclusion_tooltip = nullptr;
+	TextItem* change_tooltip = nullptr;
+	TextItem* seconds_tooltip = nullptr;
 	
 	string path; // working directory
 	
-	QGraphicsScene * scene = NULL;
+	QGraphicsScene * scene = nullptr;
 	GameEngine game_eng;
 	
 	QTimer *timer; int seconds;

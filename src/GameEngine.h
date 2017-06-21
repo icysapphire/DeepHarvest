@@ -20,7 +20,7 @@ public:
 	
 	inline int GetMode() const {return mode;}
 	inline int GetRound() const {return round;}
-	inline int GetScore() const {float z=0; if(player!=NULL) z=player->GetScore(); return z;}
+	inline int GetScore() const {float z=0; if(player!=nullptr) z=player->GetScore(); return z;}
 	
 	inline int GetWidth() const {return sizeX;}
 	inline int GetHeight() const {return sizeY;}
@@ -29,7 +29,7 @@ public:
 	* @brief calls Play() method on current Player
 	*/
 	void Play(){
-		if(player!=NULL) player->Play();
+		if(player!=nullptr) player->Play();
 	}
 	
 	/**
@@ -63,7 +63,7 @@ protected:
 	int mode;
 	int sizeX, sizeY;
 	ItemsContainer items_container;
-	Player* player = NULL;
+	Player* player = nullptr;
 	QSoundEffect bonus_sound, hole_sound;
 };
 

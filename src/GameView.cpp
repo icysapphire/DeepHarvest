@@ -153,10 +153,10 @@ void GameView::PlayAgain(){
 		ai_tooltip->setHtml(initial_ai_score_tooltip);
 		
 		
-		if(conclusion_tooltip != NULL){
+		if(conclusion_tooltip != nullptr){
 			scene->removeItem(conclusion_tooltip);
 			delete conclusion_tooltip;
-			conclusion_tooltip = NULL;
+			conclusion_tooltip = nullptr;
 		}
 
 		game_eng.PopulateGrid(scene);
@@ -169,7 +169,7 @@ void GameView::keyPressEvent(QKeyEvent* event) {
 	if (event->key() == Qt::Key_Escape)
 		close();
 	// Play new match when pressing ESC
-	else if (event->key() == Qt::Key_Space && conclusion_tooltip != NULL)
+	else if (event->key() == Qt::Key_Space && conclusion_tooltip != nullptr)
 		PlayAgain();
 
 	// Otherwise, pass keyboard event to scene

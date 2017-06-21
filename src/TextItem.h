@@ -34,7 +34,7 @@ public:
 	void placeIt(const int x_pos, const int y_pos);
 	
 	/**
-	 * @brief stores a numeric value
+	 * @brief stores a numeric value (custom data) along with the TextItem
 	 * @param float value
 	 */
 	void SetValue(const float v) {numeric_value=v;}

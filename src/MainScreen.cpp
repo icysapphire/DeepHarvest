@@ -9,13 +9,13 @@
 MainScreen::MainScreen(QWidget *parent) {
 	QWidget *window = new QWidget(this);
 	window->setObjectName("window");
-	window->setStyleSheet("#window{background-image:url(:/images/sky.jpg);width:800px;} QLabel{padding-top:20px; padding-bottom:20px;font-size:18px;} QPushButton{font-size:18px;}");
+	window->setStyleSheet("#window{background-image:url(:/images/sky.jpg);width:800px;min-width:550px;} QLabel{padding-top:19px; padding-bottom:5px;font-size:18px;} QPushButton{font-size:18px;}");
 	
 	setWindowTitle("DeepHarvest");
 	QLabel * title = new QLabel("<h1>DeepHarvest</h1>",this);
 	QLabel * how_to = new QLabel(this);
 
-	QString how_to_txt(QString("Welcome to a very simple catch game. <br />The aim is to move the boy in order to catch strawberries and avoid holes. <br /> You have 50 moves to be done in no more than 15 seconds, then the grid will be restored to initial state and an AI agent built upon a deep Q-network will play the game. <br />Move with <u>arrow keys</u>."));
+	QString how_to_txt(QString("Welcome to a very simple catch game. <br />The aim is to move the boy in order to catch strawberries and avoid holes. <br /> You have 50 moves to be done in no more than 15 seconds,<br />then the grid will be restored to initial state <br /> and an AI agent built upon a deep Q-network will play the game. <br />Move with <u>arrow keys</u>.<hr />"));
 	QString Game1_txt("<h2>Game #1</h2>- Bonuses and holes are of fixed weight 1 and -1.");
 	QString Game2_txt("<h2>Game #2</h2>- Bonuses are of random weights between 16 and 64, their sum is 100. <br />Falling down a hole will make you loose 30% of harvested strawberries.");
 
@@ -23,8 +23,8 @@ MainScreen::MainScreen(QWidget *parent) {
 	how_to->setAlignment(Qt::AlignHCenter);
 	title->setAlignment(Qt::AlignHCenter);
 	
-	QPushButton * play1_btn = new QPushButton("Play #1",this);
-	QPushButton * play2_btn = new QPushButton("Play #2",this);
+	QPushButton * play1_btn = new QPushButton("Play Game #1",this);
+	QPushButton * play2_btn = new QPushButton("Play Game #2",this);
 	
 	QVBoxLayout * layout = new QVBoxLayout(this);
 	

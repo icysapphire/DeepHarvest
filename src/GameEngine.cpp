@@ -15,7 +15,7 @@ bool operator==(const position& lhs, const position& rhs) {
 }
 
 GameEngine::GameEngine(const int mode_, const int sizex, const int sizey): mode(mode_), sizeX(sizex), sizeY(sizey) {
-	srand (time(NULL));
+	srand (time(nullptr));
 	bonus_sound.setSource(QUrl::fromLocalFile(":/sounds/bonus.wav"));
 	bonus_sound.setVolume(0.95f);
 	
@@ -67,7 +67,7 @@ position GameEngine::PickNewPosition() {
 	pos.y=rand() % 9 + 0;
 	ItemsContainer::Iterator iter(items_container);
 	bool good=true;
-	if (player!=NULL && player->pos == pos) good = false;
+	if (player!=nullptr && player->pos == pos) good = false;
 	while (iter.HasNext()){
 		Item* item = iter.GetNext();
 		if(item->pos == pos) good = false;
@@ -122,19 +122,19 @@ void GameEngine::PopulateGrid(QGraphicsScene* scene, const bool restore) {
 		
 		// Reclaim ownership & destroy all items
 		
-		if(player!=NULL) {
+		if(player!=nullptr) {
 			scene->removeItem(player);
 			delete player;
-			player = NULL;
+			player = nullptr;
 		}
 		
 		iter.Reset();
 		while (iter.HasNext()){
 			Item* item = iter.GetNext();
-			if(item!=NULL){
+			if(item!=nullptr){
 				scene->removeItem(item);
 				delete item;
-				item = NULL;
+				item = nullptr;
 			}
 		}
 		
@@ -149,7 +149,7 @@ void GameEngine::PopulateGrid(QGraphicsScene* scene, const bool restore) {
 		// Reclaim ownership & destroy player
 		scene->removeItem(player);
 		delete player;
-		player = NULL;
+		player = nullptr;
 		
 		iter.Reset();
 		while (iter.HasNext()){
