@@ -8,7 +8,7 @@ void ItemsContainer::CreateItem(const float intensity, const int type, const flo
 	else item = new Hole(intensity, reward);
 	
 
-	item->pos = pos;
+	item->SetPosition(pos);
 	item->setPos(pos.x*64+(32-item->boundingRect().width()/2), pos.y*64+(32-item->boundingRect().height()/2));
 	objects.push_back(item);
 }
@@ -19,7 +19,7 @@ void ItemsContainer::CreateItem(const float intensity, const int type, const flo
 	 ItemsContainer::Iterator iter(*this);
 		while (iter.HasNext()){
 		Item* item = iter.GetNext();
-		start_positions.push_back(item->pos);
+		start_positions.push_back(item->GetPosition());
 		}
 	 }
  void ItemsContainer::RestoreBackup(){ 
@@ -27,7 +27,7 @@ void ItemsContainer::CreateItem(const float intensity, const int type, const flo
 	 int i = 0;
 	 while (iter.HasNext()){
 		Item* item = iter.GetNext();
-		item->pos = start_positions[i];
+		item->SetPosition(start_positions[i]);
 		i++;
 		}
 	}

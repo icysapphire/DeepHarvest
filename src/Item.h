@@ -25,18 +25,23 @@ public:
 	Item(QPixmap pixmap,  const int count_=0, const int type_=Item::BOY, const float intensity_=1, const float reward_=0);
 	void setPosIndex(const int sx, const int sy);
 	void SetPosition(const position pos_){pos=pos_;}
+	position GetPosition(){return pos;}
+	inline float GetIntensity(){return intensity;}
+	inline int GetType(){return type;}
+	inline float GetReward(){return reward;}
 	void RefreshPosition();
 
+
+	static const int BOY = 2;
+	static const int HOLE =0;
+	static const int BONUS = 1;
+protected:
 	QGraphicsTextItem * count_text;
 
 	float intensity;
 	int type;
 	float reward;
 	position pos;
-	
-	static const int BOY = 2;
-	static const int HOLE =0;
-	static const int BONUS = 1;
 
 };
 

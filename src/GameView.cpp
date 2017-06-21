@@ -34,7 +34,7 @@ GameView::GameView(const int mode_, QWidget *parent): QGraphicsView(parent), gam
 
     scene->addRect(rect_margin,rect_margin,64*game_eng.GetWidth(),64*game_eng.GetHeight(), whitepen);
     whitepen.setWidth(0.4f);
-    for(int i=0; i<9; i++){
+    for(int i=0; i<game_eng.GetWidth(); i++){
     scene->addLine(rect_margin+i*64,rect_margin,rect_margin+i*64,rect_margin+game_eng.GetHeight()*64, whitepen);
     scene->addLine(rect_margin,rect_margin+i*64,rect_margin+game_eng.GetWidth()*64,rect_margin+i*64, whitepen);
 	}

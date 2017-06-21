@@ -67,10 +67,10 @@ position GameEngine::PickNewPosition() {
 	pos.y=rand() % 9 + 0;
 	ItemsContainer::Iterator iter(items_container);
 	bool good=true;
-	if (player!=nullptr && player->pos == pos) good = false;
+	if (player!=nullptr && player->GetPosition() == pos) good = false;
 	while (iter.HasNext()){
 		Item* item = iter.GetNext();
-		if(item->pos == pos) good = false;
+		if(item->GetPosition() == pos) good = false;
 	}
 
 	if(good) return pos;
@@ -84,8 +84,10 @@ void GameEngine::Update() {
 	while (iter.HasNext()){
 
 		Item& current = *(iter.GetNext());
-		if(current.type!=Item::BOY && current.pos.x == player->pos.x && current.pos.y == player->pos.y) {
-			if(current.type==Item::HOLE) {
+		auto c_pos = current.GetPosition();
+		auto player_pos = player->GetPosition();
+		if(current.GetType()!=Item::BOY && c_pos.x == player_pos.x && c_pos.y == player_pos.y) {
+			if(current.GetType()==Item::HOLE) {
 				hole_sound.play();
 				
 				// A bit of animation
@@ -97,12 +99,12 @@ void GameEngine::Update() {
 				
 				if(mode==1) delta = -1;
 				else delta = -0.3*player->GetScore();
-			} else {delta=current.reward; bonus_sound.play();}
+			} else {delta=current.GetReward(); bonus_sound.play();}
 			player->AddScore(delta);
 			
 			position newpos = PickNewPosition();
-			current.pos=newpos;
-			current.setPosIndex(newpos.x, newpos.y);
+			current.SetPosition(newpos);
+			current.RefreshPosition();
 			
 			game_v->FlashScoreChange(delta);
 		}
@@ -194,16 +196,17 @@ void GameEngine::ToMatrix(vector<cv::Mat>& res_data){
 	// Populating 3D matrix with game items
 
 	// Filling player [type = 2]
-		Mat roi=data[2](Rect(player->pos.x+1, player->pos.y+1, 1, 1));
+	auto p = player->GetPosition();
+		Mat roi=data[2](Rect(p.x+1, p.y+1, 1, 1));
 		roi = Scalar(1);
 		
 	ItemsContainer::Iterator iter(items_container);
 	while (iter.HasNext()){
 		Item* item = iter.GetNext();
-		auto p = item->pos;
+		auto p = item->GetPosition();
 
-		Mat roi=data[item->type](Rect(p.x+1, p.y+1, 1, 1));
-		roi = Scalar(item->intensity);
+		Mat roi=data[item->GetType()](Rect(p.x+1, p.y+1, 1, 1));
+		roi = Scalar(item->GetIntensity());
 	}
 
 	// Resizing to 84x84 matrices
